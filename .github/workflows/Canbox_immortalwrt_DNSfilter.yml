@@ -145,9 +145,8 @@ jobs:
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::setOutput name=status::success"
 
-    - name: Upload firmware directory
-      uses: actions/upload-artifact@main
+- name : Upload artifact
+      uses: actions/upload-artifact@master
       with:
-        name: OpenWrt firmware
-        path: ./bin/
-
+        name: CM520
+        path: ./lede/bin/targets/ipq40xx/generic/
