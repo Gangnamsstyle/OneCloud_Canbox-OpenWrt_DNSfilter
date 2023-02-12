@@ -145,8 +145,9 @@ jobs:
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::setOutput name=status::success"
 
- - name: Upload artifact
-            uses: actions/upload-artifact@master
-            with:
-              name: OpenWrt firmware
-              path: ./bin/
+    - name: Upload firmware directory
+      uses: actions/upload-artifact@main
+      with:
+        name: OpenWrt firmware
+        path: ./bin/
+
